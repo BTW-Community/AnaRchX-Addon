@@ -63,3 +63,5 @@ More troubleshooting is still todo. Feel free to message me on Discord.
 Java reflection might not work if they reference obfuscated names via Strings (as mentioned above). 
 Porting those addons is a simple process though, as only the new intermediary names have to be adopted.
 
+## Multiblock structure
+https://forums.minecraftforge.net/topic/32401-creating-a-multiblock-structure/
