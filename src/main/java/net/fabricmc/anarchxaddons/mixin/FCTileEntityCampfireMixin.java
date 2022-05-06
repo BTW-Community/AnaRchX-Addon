@@ -30,18 +30,18 @@ public class FCTileEntityCampfireMixin extends TileEntity {
 		FCAddOnHandler.LogMessage("[FCLogger] WROTE " + burntimecapped() + " to NBT");
 	}
 
-	@Inject(at = @At("TAIL"), method = "OnFirstLit", cancellable = true)
+	/*@Inject(at = @At("TAIL"), method = "OnFirstLit", remap=false, cancellable = true)
 	public void OnFirstLit(CallbackInfo ci){
 		set_burntimecapped(0);
 		FCAddOnHandler.LogMessage("[FCLogger] Capped timer = " + burntimecapped());
 	}
 
-	@Inject(at = @At("HEAD"), method = "RelightSmouldering", cancellable = true)
+	@Inject(at = @At("HEAD"), method = "RelightSmouldering", remap=false, cancellable = true)
 	private void RelightSmouldering( CallbackInfo ci){
 		NBTTagCompound tag = new NBTTagCompound();
 		set_burntimecapped(tag.getInteger("fcCappedCounter"));
 		FCAddOnHandler.LogMessage("[FCLogger] Capped timer = " + burntimecapped());
-	}
+	}*/
 
 	@Inject(at = @At("TAIL"), method = "updateEntity", cancellable = true)
 	public void updateEntity( CallbackInfo ci) {
