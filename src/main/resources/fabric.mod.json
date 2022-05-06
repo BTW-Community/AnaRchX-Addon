@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "anarchxaddons",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "AnaRchx-Addons",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -14,19 +14,19 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "anarchxaddons/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "init": [
-      "net.fabricmc.example.ExampleMod"
+      "net.fabricmc.anarchxaddons.anarchxaddonsMod"
     ],
     "preLaunch": [
-      "net.fabricmc.example.ExamplePreLaunchInitializer"
+      "net.fabricmc.anarchxaddons.anarchxaddonsPreLaunchInitializer"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "anarchxaddons.mixins.json"
   ],
 
   "depends": {

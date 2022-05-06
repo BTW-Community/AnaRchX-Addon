@@ -1,9 +1,9 @@
-package net.fabricmc.example;
+package net.fabricmc.anarchxaddons;
 
 import net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint;
-import net.minecraft.src.ExampleAddon;
+import net.minecraft.src.anarchxaddons;
 
-public class ExamplePreLaunchInitializer implements PreLaunchEntrypoint {
+public class anarchxaddonsPreLaunchInitializer implements PreLaunchEntrypoint {
     /**
      * Runs the PreLaunch entrypoint to register BTW-Addon.
      * Don't initialize anything else here, use
@@ -11,6 +11,6 @@ public class ExamplePreLaunchInitializer implements PreLaunchEntrypoint {
      */
     @Override
     public void onPreLaunch() {
-        ExampleAddon.getInstance();
+        anarchxaddons.getInstance();
     }
 }

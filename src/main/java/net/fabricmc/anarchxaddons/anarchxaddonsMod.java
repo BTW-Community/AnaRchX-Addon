@@ -1,13 +1,15 @@
-package net.fabricmc.example;
+package net.fabricmc.anarchxaddons;
 
 import com.prupe.mcpatcher.MCLogger;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.src.*;
 
-public class ExampleMod implements ModInitializer {
+
+public class anarchxaddonsMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final MCLogger LOGGER = MCLogger.getLogger("modid");
+	public static final MCLogger LOGGER = MCLogger.getLogger("anarchxaddons");
 
 	@Override
 	public void onInitialize() {
