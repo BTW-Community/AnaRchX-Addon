@@ -53,7 +53,7 @@ public class ItemAsh extends Item
 				FCEntitySoulSand sandEntity = (FCEntitySoulSand) EntityList.createEntityOfType(FCEntitySoulSand.class, world, i+0.5D, j + 2.0D, k+0.5D );
 				sandEntity.MoveTowards( i, k);
 				world.spawnEntityInWorld( sandEntity );
-				GenerateAshOnBurn( world, i, j+1, k);
+				GenerateAshOnBlock( world, i, j+1, k);
 
 				if ( !player.capabilities.isCreativeMode )
 				{
@@ -67,7 +67,7 @@ public class ItemAsh extends Item
 		return super.onItemUse( stack, player, world, i, j, k, iFacing, fClickX, fClickY, fClickZ );
 	}
 
-    protected void GenerateAshOnBurn( World world, int i, int j, int k )
+    protected void GenerateAshOnBlock( World world, int i, int j, int k )
 	{
 		for ( int iTempJ = j; iTempJ > 0; iTempJ-- )
 		{

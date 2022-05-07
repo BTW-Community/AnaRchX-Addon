@@ -19,16 +19,17 @@ public class BlockCoalCinders extends FCBlockFallingFullBlock
 	    }
 	    
 	    @Override
+		// idDropped(metadata, random, fortune)
 	    public int idDropped(int par1, Random par2Random, int par3)
 	    {
-	    	int rnd = par2Random.nextInt(2);
-	    	if (rnd == 0 || rnd == 1) // TODO: check why always true??
+	    	int rnd = par2Random.nextInt(3);
+	    	if (rnd == 0 || rnd == 1)
 	    	{
 	    		return Item.coal.itemID;
 	    	}
 	    	else
 	    	{
-	    		return net.minecraft.src.FCBetterThanWolves.fcItemCoalDust.itemID;
+	    		return FCBetterThanWolves.fcItemCoalDust.itemID;
 	    	}
 	    }
 	    
