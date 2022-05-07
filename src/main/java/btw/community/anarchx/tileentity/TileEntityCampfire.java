@@ -2,12 +2,10 @@ package btw.community.anarchx.tileentity;
 
 import net.minecraft.src.*;
 
-import static net.minecraft.src.FCBlockLogDamaged.GetIsStump;
 
-public class aatileentitycampfire extends TileEntity {
+public class TileEntityCampfire extends TileEntity {
 
-    public aatileentitycampfire()
-    {
+    public TileEntityCampfire() {
         super();
     }
 
@@ -19,7 +17,7 @@ public class aatileentitycampfire extends TileEntity {
 
     public void updateEntity() {
         super.updateEntity();
-        if (worldObj.isRemote) {
+        if (!worldObj.isRemote) {
             checkMultiblock();
             if (formed) {
                 trackTimer();
@@ -27,7 +25,6 @@ public class aatileentitycampfire extends TileEntity {
             }
         }
     }
-
 
     private void createCoalcinders() {
 
@@ -47,7 +44,8 @@ public class aatileentitycampfire extends TileEntity {
                 checkZ++;
                 if (checkZ > 1) {
                     checkZ = -1;
-                    formed = !foundInvalidBlock && inventoriesFound == 1;
+                    formed = !foundInvalidBlock &&
+                            inventoriesFound == 1;
                     foundInvalidBlock = false;
                     inventoriesFound = 0;
                     FCAddOnHandler.LogMessage("formed: " + formed);

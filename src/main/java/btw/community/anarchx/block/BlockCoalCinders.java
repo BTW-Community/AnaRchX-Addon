@@ -4,21 +4,17 @@ import net.minecraft.src.*;
 
 import java.util.Random;
 
-public class aablockcoalcinders extends FCBlockFallingFullBlock
+public class BlockCoalCinders extends FCBlockFallingFullBlock
 	{
-	    public aablockcoalcinders(int iBlockID )
+	    public BlockCoalCinders(int iBlockID )
 	    {
 	        super( iBlockID, Material.rock );
 	        
 	        setHardness( 1F );
 	        SetShovelsEffectiveOn();
-	        
 	        SetBuoyant();
-	        
 	        setStepSound( soundGravelFootstep );
-	        
 	        setUnlocalizedName( "AABlockCoalCinders" );
-	        
 	        this.setCreativeTab( CreativeTabs.tabBlock );
 	    }
 	    
@@ -26,7 +22,7 @@ public class aablockcoalcinders extends FCBlockFallingFullBlock
 	    public int idDropped(int par1, Random par2Random, int par3)
 	    {
 	    	int rnd = par2Random.nextInt(2);
-	    	if (rnd == 0 || rnd == 1)
+	    	if (rnd == 0 || rnd == 1) // TODO: check why always true??
 	    	{
 	    		return Item.coal.itemID;
 	    	}
@@ -53,8 +49,8 @@ public class aablockcoalcinders extends FCBlockFallingFullBlock
 		{
 			DropItemsIndividualy( world, i, j, k, FCBetterThanWolves.fcItemCoalDust.itemID, 1, 0, fChanceOfDrop );
 			DropItemsIndividualy( world, i, j, k, FCBetterThanWolves.fcItemCoalDust.itemID, 2, 0, 0.75F );
-			DropItemsIndividualy( world, i, j, k, anarchxaddons.aaitemash.itemID, 2, 0, fChanceOfDrop);
-			DropItemsIndividualy( world, i, j, k, anarchxaddons.aaitemash.itemID, 6, 0, 0.75F);
+			DropItemsIndividualy( world, i, j, k, AnarchxAddons.ItemAsh.itemID, 2, 0, fChanceOfDrop);
+			DropItemsIndividualy( world, i, j, k, AnarchxAddons.ItemAsh.itemID, 6, 0, 0.75F);
 			
 			return true;
 		}
@@ -82,7 +78,7 @@ public class aablockcoalcinders extends FCBlockFallingFullBlock
 			blockIcon = register.registerIcon("AABlockCoalCinders");
 		}
 	    
-	    //------------- Class Specific Methods ------------//    
+	    //------ Class Specific Methods ------//
 	    
-		//----------- Client Side Functionality -----------//
+		//------ Client Side Functionality ------//
 	}

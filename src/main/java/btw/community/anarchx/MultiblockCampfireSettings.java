@@ -1,11 +1,11 @@
 package btw.community.anarchx;
 
-public class multiblockcampfiresettings {
+public class MultiblockCampfireSettings {
 
 	public static int m_iBurnTimeSinceCapped = 0;
 	public static boolean formed = false;
 
-	public static void checkmultiblock(){
+	public static void checkMultiblock(){
 		//FCAddOnHandler.LogMessage("[FCLogger] Checked the multiblock");
 		//check each block around the 3x3 of the center campfire
 		//if any of those blocks is not from the chosen list of accepted wall blocks
@@ -17,7 +17,7 @@ public class multiblockcampfiresettings {
 		//	return formed=true
 	}
 
-	public static void checkoutput(){
+	public static void checkOutput(){
 		//if multiblock formed
 		//if m_iBurnTimeSinceCapped > (15 * FCUtilsMisc.m_iTicksPerMinute)
 		//

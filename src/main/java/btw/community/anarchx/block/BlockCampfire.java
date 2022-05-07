@@ -1,11 +1,11 @@
 package btw.community.anarchx.block;
 
-import btw.community.anarchx.tileentity.aatileentitycampfire;
+import btw.community.anarchx.tileentity.TileEntityCampfire;
 import net.minecraft.src.*;
 
-public class aablockcampfire extends BlockContainer
+public class BlockCampfire extends BlockContainer
 	{
-	    public aablockcampfire(int iBlockID) {
+	    public BlockCampfire(int iBlockID) {
 			super( iBlockID, Material.iron);
 			setUnlocalizedName( "AABlockCampfire" );
 			this.setCreativeTab( CreativeTabs.tabBlock );
@@ -14,7 +14,7 @@ public class aablockcampfire extends BlockContainer
 
 		@Override
 		public TileEntity createNewTileEntity(World var1) {
-			return new aatileentitycampfire();
+			return new TileEntityCampfire();
 		}
 
 	}

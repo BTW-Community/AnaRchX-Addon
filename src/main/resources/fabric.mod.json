@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "init": [
-      "net.fabricmc.anarchxaddons.anarchxaddonsMod"
+      "net.fabricmc.anarchxaddons.AnarchxAddonsMod"
     ],
     "preLaunch": [
-      "net.fabricmc.anarchxaddons.anarchxaddonsPreLaunchInitializer"
+      "net.fabricmc.anarchxaddons.AnarchxAddonsPreLaunchInitializer"
     ]
   },
   "mixins": [
