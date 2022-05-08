@@ -1,14 +1,24 @@
 package btw.community.anarchx.tileentity;
 
-import net.minecraft.src.Block;
-import net.minecraft.src.FCAddOnHandler;
-import net.minecraft.src.FCBlockLog;
-import net.minecraft.src.TileEntity;
+import net.minecraft.src.*;
 
 public class TileEntityCampfire extends TileEntity {
 
+    //TODO MIXIN On FCcampfire lit
+    //check neighbor 5/6 blocks = logs
+    //replace FCcampfire with AAcampfire
+    //TODO AACampfire model copy of FCcampfire model
+    //without functionality
+    //TODO Play smoke particles on top layer blocks
+    //TODO Play fire sounds when formed but no fire
+    //TODO if multiblock destroyed light on fire air on top of any log
+    //TODO replace AAcampfire with FCcampfireDead when finished timer
+    //TODO fizz sound only when done
+    //TODO figure out fuel
+
     public TileEntityCampfire() {
         super();
+
     }
 
     private boolean formed;
@@ -26,17 +36,24 @@ public class TileEntityCampfire extends TileEntity {
             checkMultiblock(3);
             if (formed) {
                 trackTimer();
-                createCoalcinders();
+                createCoalCinderBlocks();
             }
         }
     }
 
-    private void createCoalcinders() {
+    private void createCoalCinderBlocks() {
+        //TODO replace logs with coal cinder blocks
+        //are smouldering logs allowed?
 
     }
 
     private void trackTimer() {
-
+        //TODO timers
+        //once the fire replaced
+        //and the multiblock formed start formedtimer
+        //if the block is not formed pause formedtimer
+        //light exposed logs on fire
+        //formedtimer runs out createCoalCinderBlocks
     }
 
     /**

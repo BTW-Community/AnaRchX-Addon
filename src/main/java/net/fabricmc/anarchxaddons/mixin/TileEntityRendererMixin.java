@@ -1,13 +1,42 @@
 package net.fabricmc.anarchxaddons.mixin;
 
+import btw.community.anarchx.tileentity.TileEntityCampfire;
 import net.minecraft.src.*;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
-@Mixin(FCTileEntityCampfire.class)
-public class FCTileEntityCampfireMixin extends TileEntity {
+@Mixin(TileEntityRenderer.class)
+public class TileEntityRendererMixin {
+    /*private Map specialRendererMap = new HashMap();
 
-/*	@Inject(at = @At("TAIL"), method = "readFromNBT", cancellable = true)
+    @Inject(at = @At("TAIL"), method = "<init>")
+    private void inject(CallbackInfo ci){
+        specialRendererMap.put( TileEntityCampfire.class, new FCTileEntityCampfireRenderer() );
+    }
+    Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException:
+    Invalid descriptor on
+    anarchxaddons.mixins.json:TileEntityRendererMixin->
+    @Inject::inject
+    (Ljava/util/Map;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V!
+    Expected
+    (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    but found
+    (Ljava/util/Map;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    [INJECT Applicator Phase ->
+    anarchxaddons.mixins.json:TileEntityRendererMixin ->
+    Apply Injections ->
+    ->
+    Inject ->
+    anarchxaddons.mixins.json:TileEntityRendererMixin->
+    @Inject::inject(Ljava/util/Map;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+
+
+    @Inject(at = @At("TAIL"), method = "readFromNBT", cancellable = true)
 	public void readFromNBT(NBTTagCompound tag , CallbackInfo ci) {
 		//super.readFromNBT( tag );
 		if ( tag.hasKey( "fcCappedCounter" ) )
